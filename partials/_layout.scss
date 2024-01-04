@@ -1,0 +1,389 @@
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 14px;
+}
+
+.bg_home{
+    position: relative;
+}
+
+.bg_home::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/image_microsoft.png");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+
+.hero{
+    color: $white-normal;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px;
+    
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 64px;
+    }
+
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+
+}
+
+.hero_links{
+    color: $white-normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+
+    p{
+        text-align: center;
+        margin: 14px 0;
+    }
+}
+
+.button_contact{
+    padding: 14px 28px;
+    color: $white-normal;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.button_contact:hover{
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+#curriculo{
+    background-color: $red-normal;
+}
+
+#github{
+    background-color: $github;
+}
+
+#linkedin{
+    background-color: $linkedin;
+}
+
+@keyframes scaleButton{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 90vh;
+
+        h1{
+            font-size: 64px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        h2{
+            font-size: 14px;
+        }
+    }  
+
+    .button_contact{
+        font-size: small;
+    }
+
+
+}
+
+@media screen and (max-width: 480px){
+    .hero{
+        h1{
+            font-size: 36px;
+        }
+    }
+}
+
+
+.about{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 64px 14px 64px 14px;
+
+    img{
+        max-width: 570px;
+    }
+}
+
+.about_content div{
+    flex: 1;
+}
+
+.about_description{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width: 768){
+    .about_content{
+        flex-direction: column;
+    }
+}
+
+.conhecimentos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        max-width: 120px;
+    }
+}
+
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .conhecimentos {
+        flex-direction: column;
+    }
+
+    .habilidade {
+        margin: 10px;
+    }
+
+    img {
+        max-width: 80px;
+    }
+}
+
+
+.services{
+    background-color: $white-normal;
+    color: $black-normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 14px;
+}
+
+.services_content h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 14px;
+}
+
+.services_content p{
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+}
+
+.haircuts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+    position: relative;
+    z-index: 1;
+}
+
+.haircut{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-normal;
+    border-radius: 10px;
+    box-shadow: 0px -1px 17px -4px rgba(0,0,0, 0.45);
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        max-width: 354px;
+        height: 313px;
+        transition: transform 0.2s;
+    }
+}
+
+.haircut img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.haircut_info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: $white-normal;
+    z-index: 99;
+    flex-direction: column;
+    align-items: center; 
+    
+    strong{
+        margin-bottom: 8px;
+    }
+}
+
+.button_info button{
+    border: 1px solid $red-normal;
+    padding: 8px 14px;
+    border-radius: 4px;
+    color: $white-normal;
+    background-color: $red-normal;
+    transition: background-color 0.8s;
+}
+
+.button_info button:hover{
+    border: 1px solid $black-normal;
+    background-color: $black-normal;
+}
+
+.haircut.group {
+    flex-basis: calc(33.333% - 16px);
+}
+
+@media screen and (max-width: 768px) {
+    .haircuts{
+        flex-direction: column;
+    }
+
+    .haircut img{
+        width: 314px;
+    }
+
+    .haircut_info {
+        flex-direction: column;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $white-normal;
+}
+
+.footer_icons{
+    display: flex;
+    gap: 10px;
+    color: $white-normal;
+}
+
+.footer_icons a:hover{
+    i{
+        animation: translateY 0.8s infinite alternate;
+        color: $red-light;
+    }
+}
+
+.btn_whatssapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+    img{
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+
+.btn_whatssapp .tooltip_text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $black-normal;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.btn_whatssapp:hover .tooltip_text{
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px){
+    .btn_whatssapp{
+        img{
+            max-width: 64px;
+        }
+    }
+}
+
