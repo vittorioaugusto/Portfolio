@@ -1,25 +1,21 @@
 AOS.init();
 
-// Adiciona um evento de clique para cada link do menu
-document.querySelectorAll(".menu-link").forEach(link => {
-    link.addEventListener("click", function(event) {
-        // Previne o comportamento padrão de clicar no link
-        event.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.navbar_links a');
 
-        // Obtém o destino da rolagem a partir do atributo href do link
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
 
-        // Verifica se o elemento alvo existe
-        if (targetElement) {
-            // Faz a rolagem suave para o elemento alvo
-            targetElement.scrollIntoView({
-                behavior: "smooth"
-            });
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
 
-            // Fecha o menu removendo a classe "show-menu" da container
-            document.querySelector(".container").classList.remove("show-menu");
-        }
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
 

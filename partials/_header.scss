@@ -12,29 +12,69 @@ i{
     color: $white-normal;
 }
 
-.header_icons{
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
     display: flex;
-    gap: 14px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: $black-dark;
 }
 
-.header_icons a:hover{
-    i{
-        animation: translateY 0.8s infinite alternate;
-        color: $red-light;
-    }
+.navbar_logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.navbar_links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    border-radius: 10px;
+}
+
+.navbar_links a:hover {
+    color: $red-normal;
+    transition: color 0.3s ease;
+}
+
+.navbar_links a#github_icon,
+.navbar_links a#linkedin_icon {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar_links a#github_icon:hover,
+.navbar_links a#linkedin_icon:hover {
+    color: #00bcd4;
 }
 
 #github_icon:hover{
     i{
-        animation: translateY 0.8s infinite alternate;
         color: $github;
+        transition: color 0.3s ease;
     }
 }
 
 #linkedin_icon:hover{
     i{
-        animation: translateY 0.8s infinite alternate;
         color: $linkedin;
+        transition: color 0.3s ease;
     }
 }
 
@@ -46,7 +86,6 @@ i{
         transform: translateY(-8px) scale(1.1);
     }
 }
-
 
 .header_button{
     border: 1px solid $white-normal;
@@ -90,6 +129,84 @@ i{
     .header_button{
         display: none;
     }
+}
+
+
+.about-me {
+    background-color: $secondary-normal;
+    padding: 100px 100px 100px 100px;
+}
+
+.about-me-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+}
+
+.about-me-text {
+    width: 60%;
+}
+
+.about-me-text h2 {
+    color: $white-normal;
+}
+
+.about-me-text p {
+    color: $white-normal;
+}
+
+.about-me-image img {
+    width: 100%;
+    border-radius: 8px;
+    
+}
+
+.contact-me {
+    background-color: $primary-normal;
+    padding: 100px 50px 100px 50px;
+}
+
+.contact-me-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto; 
+}
+
+.contact-me-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.contact-me-buttons {
+    width: 40%;
+    text-align: center;
+}
+
+.contact-me-buttons h2 {
+    color: $white-normal;
+}
+
+.contact-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0097a7;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: $red-normal;
+    transition: background-color 0.8s;
 }
 
  

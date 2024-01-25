@@ -12,7 +12,7 @@
     content: "";
     display: block;
     position: absolute;
-    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/image_microsoft.png");
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/img/image_microsoft.png");
     left: 0;
     top: 0;
     width: 100%;
@@ -26,12 +26,12 @@
 
 .hero{
     color: $white-normal;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 14px;
+    padding: 10px;
     
     h1{
         text-align: center;
@@ -74,6 +74,7 @@
     font-size: 18px;
     font-weight: 600;
     margin: 10px;
+    border-radius: 10px;
 }
 
 .button_contact:hover{
@@ -139,105 +140,7 @@
     }
 }
 
-.hamburger {
-    width: 2rem;
-    height: 2rem;
-    position: fixed;
-    right: 2rem;
-    top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 1000;
-}
   
-.show-menu .hamburger {
-    right: 16rem;
-}
-
-.line {
-    width: 100%;
-    padding: 2px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0.1rem 0.1rem 3px rgba(0, 0, 0, 0.788);
-    transition: transform 0.7s;
-}
-  
-.show-menu #line1 {
-    transform: rotate(45deg) translate(0.4rem, 0.9rem);
-    background-color: #fff;
-    box-shadow: none;
-}
-  
-.show-menu #line2 {
-    opacity: 0;
-    visibility: hidden;
-}
-  
-.show-menu #line3 {
-    transform: rotate(-45deg) translate(0.3rem, -0.9rem);
-    background-color: #fff;
-    box-shadow: none;
-}
-
-.sidebar {
-    width: 20rem;
-    height: 100vh;
-    background: linear-gradient(329.54deg, #111111 0%, #222222 100%);
-    box-shadow: 10px 5px 15px 10px rgba(0, 0, 0, 0.582);
-    top: 0;
-    right: -20rem;
-    transition: all 0.8s;
-    position: fixed;
-    z-index: 2;
-}
-  
-.show-menu .sidebar {
-    right: 0;
-}
-  
-@media screen and (max-width: 768px) {
-    .sidebar {
-      width: 15rem;
-      position: fixed;
-    }
-    .show-menu #line1 {
-      left: 5rem;
-      position: relative;
-    }
-    .show-menu #line3 {
-      left: 5rem;
-      position: relative;
-    }
-
-}
-
-.menu {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-  
-.menu-item {
-    text-align: center;
-    margin-bottom: 0.5rem;
-}
-  
-.menu-link {
-    font-family: sans-serif;
-    font-size: 2rem;
-    color: #fff;
-    transition: color 0.7s;
-}
-  
-.menu-link:hover {
-    color: #D94140;
-    transition: color 0.7s;
-}/*# sourceMappingURL=style.css.map */
-
 .about{
     background-color: $primary-normal;
     overflow: hidden;
@@ -319,15 +222,14 @@
     }
 }
 
-
 .services{
-    background-color: $white-normal;
-    color: $black-normal;
+    background-color: $secondary-normal;
+    color: $white-normal;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px 14px;
+    padding: 44px 14px;
 }
 
 .services_content h2{
@@ -358,6 +260,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    color: $black-dark;
     background-color: $white-normal;
     border-radius: 10px;
     box-shadow: 0px -1px 17px -4px rgba(0,0,0, 0.45);
@@ -392,17 +295,17 @@
 }
 
 .button_info button{
-    border: 1px solid $red-normal;
+    border: 1px solid #0097a7;
     padding: 8px 14px;
     border-radius: 4px;
     color: $white-normal;
-    background-color: $red-normal;
+    background-color: #0097a7;
     transition: background-color 0.8s;
 }
 
 .button_info button:hover{
-    border: 1px solid $black-normal;
-    background-color: $black-normal;
+    border: 1px solid $red-normal;
+    background-color: $red-normal;
 }
 
 .haircut.group {
@@ -448,48 +351,3 @@
         color: $red-light;
     }
 }
-
-.btn_whatssapp{
-    position: fixed;
-    bottom: 14px;
-    right: 24px;
-    z-index: 99;
-
-    img{
-        max-width: 74px;
-        transition: transform 0.4s;
-    }
-
-    img:hover{
-        transform: scale(1.1);
-    }
-}
-
-.btn_whatssapp .tooltip_text{
-    visibility: hidden;
-    position: absolute;
-    width: 120px;
-    top: 8px;
-    left: -144px;
-    padding: 6px;
-    border-radius: 8px;
-    text-align: center;
-    background-color: $black-normal;
-    color: $white-normal;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.btn_whatssapp:hover .tooltip_text{
-    visibility: visible;
-    opacity: 1;
-}
-
-@media screen and (max-width: 768px){
-    .btn_whatssapp{
-        img{
-            max-width: 64px;
-        }
-    }
-}
-
