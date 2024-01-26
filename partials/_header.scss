@@ -4,6 +4,11 @@
     padding: 14px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 header{
     width: 100%;
 }
@@ -61,23 +66,84 @@ header{
     border-radius: 10px;
 }
 
+.navbar_links a.active {
+    color: red;
+}
+
 .navbar_links a:hover {
     color: $red-normal;
     transition: color 0.3s ease;
 }
 
-.navbar_links a#github_icon,
-.navbar_links a#linkedin_icon {
+.navbar_icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+.navbar_icon a {
     margin-right: 20px;
-    text-decoration: none;
-    color: #fff;
     font-weight: bold;
+    transition: color 0.3s ease;
+    border-radius: 10px;
+}
+
+.navbar_icon a:hover {
+    color: $red-normal;
     transition: color 0.3s ease;
 }
 
-.navbar_links a#github_icon:hover,
-.navbar_links a#linkedin_icon:hover {
-    color: #00bcd4;
+.navbar_icon a#github_icon,
+.navbar_icon a#linkedin_icon {
+    margin-right: 20px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.toggle_button {
+    display: none;
+}
+
+@media only screen and (max-width: 910px) {
+    .navbar_links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 53px;
+        right: 0;
+        background-color: #333;
+        width: 50%;
+    }
+
+    .navbar_links.active {
+        display: flex;
+    }
+
+    .navbar_links a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .navbar_toggle {
+        display: block;
+    }
+
+    .toggle_button {
+        display: block;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .navbar_icon{
+        display: flex;
+        position: absolute;
+        right: 50px;
+    }
+
 }
 
 #github_icon:hover{
@@ -222,8 +288,10 @@ header{
 
 
 .about-me {
+    display: flex;
     background-color: $secondary-normal;
-    padding: 100px 100px 100px 100px;
+    padding: 50px 10px 10px 20px;
+    height: 100%;
 }
 
 .about-me-content {
@@ -233,10 +301,13 @@ header{
     width: 80%;
     margin: 0 auto;
     height: 80vh;
+    flex-direction: column; 
+    height: auto;
 }
 
 .about-me-text {
-    width: 60%;
+    width: 100%;
+    margin-bottom: 20px; 
 }
 
 .about-me-text h2 {
@@ -248,9 +319,30 @@ header{
 }
 
 .about-me-image img {
-    width: 100%;
+    width: 70%;
+    max-width: 500px;
+    height: auto; 
     border-radius: 8px;
-    
+}
+
+@media only screen and (min-width: 768px) {
+   
+    .about-me-content {
+        flex-direction: row;
+        height: 80vh;
+    }
+
+    .about-me-text {
+        width: 60%;
+        margin-bottom: 0;
+    }
+
+    .about-me-image img {
+        width: 70%;
+        max-width: 500px;
+        height: auto; 
+        border-radius: 8px;
+    }
 }
 
 
@@ -263,6 +355,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 30px;
 }
 
 .about_content{
@@ -345,7 +438,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 44px 14px;
+    padding: 70px;
 }
 
 .projects_content h2{
@@ -448,15 +541,16 @@ header{
 
 
 .contact-me {
+    display: flex;
     background-color: $primary-normal;
-    padding: 100px 50px 100px 50px;
+    padding: 100px 100px 100px 100px;
 }
 
 .contact-me-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 70%;
     margin: 0 auto; 
 }
 
@@ -499,7 +593,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 54px 0;
+    padding: 50px 0;
     gap: 24px;
     color: $white-normal;
 }
@@ -507,6 +601,10 @@ header{
 .footer_icons{
     display: flex;
     gap: 10px;
+    color: $white-normal;
+}
+
+.footer_icons a{
     color: $white-normal;
 }
 
