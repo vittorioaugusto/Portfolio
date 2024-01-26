@@ -4,6 +4,10 @@
     padding: 14px;
 }
 
+header{
+    width: 100%;
+}
+
 .bg_home{
     position: relative;
 }
@@ -22,6 +26,81 @@
     background-repeat: no-repeat;
     background-position: 50% 0;
     opacity: 0.9;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: $black-dark;
+}
+
+.navbar_logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.navbar_links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar_links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    border-radius: 10px;
+}
+
+.navbar_links a:hover {
+    color: $red-normal;
+    transition: color 0.3s ease;
+}
+
+.navbar_links a#github_icon,
+.navbar_links a#linkedin_icon {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar_links a#github_icon:hover,
+.navbar_links a#linkedin_icon:hover {
+    color: #00bcd4;
+}
+
+#github_icon:hover{
+    i{
+        color: $github;
+        transition: color 0.3s ease;
+    }
+}
+
+#linkedin_icon:hover{
+    i{
+        color: $linkedin;
+        transition: color 0.3s ease;
+    }
+}
+
+@keyframes translateY{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
 }
 
 .hero{
@@ -140,8 +219,43 @@
     }
 }
 
-  
-.about{
+
+
+.about-me {
+    background-color: $secondary-normal;
+    padding: 100px 100px 100px 100px;
+}
+
+.about-me-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 80vh;
+}
+
+.about-me-text {
+    width: 60%;
+}
+
+.about-me-text h2 {
+    color: $white-normal;
+}
+
+.about-me-text p {
+    color: $white-normal;
+}
+
+.about-me-image img {
+    width: 100%;
+    border-radius: 8px;
+    
+}
+
+
+
+.conhecimento{
     background-color: $primary-normal;
     overflow: hidden;
     color: $white-normal;
@@ -222,7 +336,9 @@
     }
 }
 
-.services{
+
+
+.projects{
     background-color: $secondary-normal;
     color: $white-normal;
     display: flex;
@@ -232,14 +348,14 @@
     padding: 44px 14px;
 }
 
-.services_content h2{
+.projects_content h2{
     text-transform: uppercase;
     text-align: center;
     font-size: 42px;
     margin-bottom: 14px;
 }
 
-.services_content p{
+.projects_content p{
     line-height: 150%;
     margin-bottom: 14px;
     text-align: center;
@@ -294,7 +410,7 @@
     }
 }
 
-.button_info button{
+.card_button button{
     border: 1px solid #0097a7;
     padding: 8px 14px;
     border-radius: 4px;
@@ -303,7 +419,7 @@
     transition: background-color 0.8s;
 }
 
-.button_info button:hover{
+.card_button button:hover{
     border: 1px solid $red-normal;
     background-color: $red-normal;
 }
@@ -330,174 +446,6 @@
 }
 
 
-
-
-
-header{
-    width: 100%;
-}
-
-.header_content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-i{
-    color: $white-normal;
-}
-
-.navbar {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: $black-dark;
-}
-
-.navbar_logo h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #fff;
-}
-
-.navbar_links {
-    display: flex;
-    align-items: center;
-}
-
-.navbar_links a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    border-radius: 10px;
-}
-
-.navbar_links a:hover {
-    color: $red-normal;
-    transition: color 0.3s ease;
-}
-
-.navbar_links a#github_icon,
-.navbar_links a#linkedin_icon {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.navbar_links a#github_icon:hover,
-.navbar_links a#linkedin_icon:hover {
-    color: #00bcd4;
-}
-
-#github_icon:hover{
-    i{
-        color: $github;
-        transition: color 0.3s ease;
-    }
-}
-
-#linkedin_icon:hover{
-    i{
-        color: $linkedin;
-        transition: color 0.3s ease;
-    }
-}
-
-@keyframes translateY{
-    from{
-        transform: translateY(0) scale(1);
-    }
-    to{
-        transform: translateY(-8px) scale(1.1);
-    }
-}
-
-.header_button{
-    border: 1px solid $white-normal;
-    padding: 8px 14px;
-    border-radius: 4px;
-    color: $white-normal;
-    background-color: transparent;
-    transition: background-color 0.8s;
-}
-
-.header_button:hover{
-    border: 1px solid $red-light;
-    background-color: $red-light;
-}
-
-.header_logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 14px;
-}
-
-@media screen and (max-width: 768px){
-    .header_content{
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        i{
-            margin-top: 16px;
-            font-size: 34px;
-        }
-    }
-
-    .header_logo img{
-        width: 160px;
-        margin-top: 46px;
-    }
-
-    .header_button{
-        display: none;
-    }
-}
-
-
-.about-me {
-    background-color: $secondary-normal;
-    padding: 100px 100px 100px 100px;
-}
-
-.about-me-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    height: 80vh;
-}
-
-.about-me-text {
-    width: 60%;
-}
-
-.about-me-text h2 {
-    color: $white-normal;
-}
-
-.about-me-text p {
-    color: $white-normal;
-}
-
-.about-me-image img {
-    width: 100%;
-    border-radius: 8px;
-    
-}
 
 .contact-me {
     background-color: $primary-normal;
@@ -543,6 +491,8 @@ i{
     background-color: $red-normal;
     transition: background-color 0.8s;
 }
+
+
 
 .footer{
     display: flex;
