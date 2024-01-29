@@ -1,11 +1,11 @@
-AOS.init();
-
 document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('.navbar_links a');
     const toggleButton = document.querySelector('.toggle_button');
     const navbarLinks = document.querySelector('.navbar_links');
     const navLinks = document.querySelectorAll('.navbar_links a');
-    
+
+    let isMenuOpen = false;
+
     links.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -22,16 +22,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     toggleButton.addEventListener('click', function () {
-        navbarLinks.classList.toggle('active');
+        isMenuOpen = !isMenuOpen;
+        navbarLinks.classList.toggle('active', isMenuOpen);
+
+        // Alterna entre o ícone de menu e 'X'
+        if (isMenuOpen) {
+            toggleButton.innerHTML = '&#10005;'; // Código HTML para 'X'
+        } else {
+            toggleButton.innerHTML = '&#9776;'; // Código HTML para ícone de menu
+        }
     });
 
     navLinks.forEach(link => {
         link.addEventListener('click', function () {
             navbarLinks.classList.remove('active');
+            isMenuOpen = false;
+            toggleButton.innerHTML = '&#9776;'; // Volta para o ícone de menu
         });
     });
-
 });
+
 
 function changeColor(link) {
     var links = document.querySelectorAll('.nav-link');
