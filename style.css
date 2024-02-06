@@ -45,6 +45,23 @@ header {
     height: 100vh;
   }
 }
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 200);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0000ff;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
