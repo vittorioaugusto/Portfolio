@@ -109,7 +109,6 @@ header{
     margin-right: 20px;
     font-weight: bold;
     transition: color 0.3s ease;
-    border-radius: 10px;
 }
 
 .navbar_icon a:hover {
@@ -171,6 +170,13 @@ header{
         display: flex;
         position: absolute;
         right: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 368px) {
+    .navbar_logo h1 {
+        font-size: 20px;
     }
 
 }
@@ -318,7 +324,7 @@ header{
 
 .about-me {
     display: flex;
-    background-color: $secondary-normal;
+    background-color: $primary-normal;
     height: 100%;
 }
 
@@ -402,7 +408,7 @@ header{
 
 
 .conhecimento{
-    background-color: $primary-normal;
+    background-color: $secondary-normal;
     overflow: hidden;
     color: $white-normal;
     display: flex;
@@ -491,7 +497,7 @@ header{
 
 
 .projects{
-    background-color: $secondary-normal;
+    background-color: $primary-normal;
     color: $white-normal;
     display: flex;
     flex-direction: column;
@@ -638,11 +644,18 @@ header{
 
 }
 
+@media only screen and (max-width: 368px) {
+    .card img{
+        width: 300px;
+    }
+
+}
+
 
 
 .contact-me {
     display: flex;
-    background-color: $primary-normal;
+    background-color: $secondary-normal;
     padding: 100px 100px 100px 100px;
 }
 
@@ -705,6 +718,13 @@ header{
         text-align: center;
         align-items: center;
         justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 368px) {
+    .contact-me-buttons a {
+        font-size: 14px;
     }
 
 }
