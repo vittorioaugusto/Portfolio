@@ -33,8 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleButton.innerHTML = '&#9776;';
         }
 
-        this.classList.toggle('clicked');
-       
+        toggleButton.classList.toggle('clicked');
     });
 
     navLinks.forEach(link => {
@@ -42,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navbarLinks.classList.remove('active');
             isMenuOpen = false;
             toggleButton.innerHTML = '&#9776;';
+            toggleButton.classList.remove('clicked');
         });
     });
 });
@@ -55,6 +55,7 @@ function changeColor(link) {
 
     link.classList.add('active');
 }
+
 
 function highlightOnScroll() {
     var scrollPosition = window.scrollY || document.documentElement.scrollTop;
@@ -79,6 +80,3 @@ function highlightOnScroll() {
 window.addEventListener('scroll', highlightOnScroll);
 
 window.addEventListener('load', highlightOnScroll);
-
-
-
