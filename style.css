@@ -165,6 +165,10 @@ header {
     color: #fff;
     font-size: 24px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .toggle_button.clicked {
+    transform: rotate(90deg);
   }
   .navbar_icon {
     display: flex;
@@ -290,9 +294,19 @@ header {
     padding: 20px;
   }
 }
+@media screen and (max-width: 590px) {
+  .hero {
+    padding: 100px 0;
+  }
+}
 @media screen and (max-width: 480px) {
+  .hero {
+    padding: 100px 0;
+  }
+}
+@media screen and (max-width: 350px) {
   .hero h1 {
-    font-size: 36px;
+    font-size: 50px;
   }
 }
 .about-me {
@@ -566,6 +580,10 @@ header {
 
 #php_icon {
   color: #777BB3;
+}
+
+#sql_icon {
+  color: orange;
 }
 
 #node_js_icon {

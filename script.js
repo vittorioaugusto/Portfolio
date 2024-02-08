@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             toggleButton.innerHTML = '&#9776;';
         }
+
+        this.classList.toggle('clicked');
+       
     });
 
     navLinks.forEach(link => {
@@ -76,3 +79,6 @@ function highlightOnScroll() {
 window.addEventListener('scroll', highlightOnScroll);
 
 window.addEventListener('load', highlightOnScroll);
+
+
+
