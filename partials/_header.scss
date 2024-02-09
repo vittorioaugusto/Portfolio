@@ -546,7 +546,7 @@ header{
 }
 
 .card{
-    flex: 0 0 400px;
+    flex: 0 0 500px;
     display: flex;
     flex-direction: column;
     color: $black-dark;
@@ -558,7 +558,7 @@ header{
 }
 
 .card img{
-    width: 400px; 
+    width: 500px; 
     height: 300px; 
     object-fit: cover; 
     transition: transform 0.2s;
@@ -588,12 +588,13 @@ header{
 
 .card_button button{
     border: 1px solid #0097a7;
-    padding: 8px 14px;
+    padding: 10px 20px;
     border-radius: 5px;
     color: $white-normal;
     background-color: #0097a7;
     transition: background-color 0.8s;
     margin: 5px;
+    font-size: 14px;
 }
 
 .card_button button:hover{
@@ -602,14 +603,14 @@ header{
 }
 
 .card_icons{
-    font-size: 16px;
+    font-size: 18px;
     background-color: $primary-dark;
-    padding: 3px 30px;
+    padding: 5px 10px;
     border-radius: 5px;
 }
 
 .card_icons i{
-    padding: 0 3px;
+    padding: 0 5px;
 }
 
 #html5_icon{
@@ -644,30 +645,44 @@ header{
     color: $react;
 }
 
-@media screen and (max-width: 1070px) {
-    .projects{
-        padding: 130px 0;
+@media screen and (max-width: 1050px) {
+    .cards{
+        flex-direction: column;
     }
 
     .card{
         flex: 1;
     }
     
-    .cards{
-        flex-direction: column;
-    }
-
     .card img{
-        width: 350px;
+        width: 500px;
     }
 
 }
 
-@media only screen and (max-width: 368px) {
+@media screen and (max-width: 910px) {
+    .card img{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card img{
+        width: 400px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
     .card img{
         width: 300px;
     }
+}
 
+@media only screen and (max-width: 350px) {
+    .card img{
+        width: 300px;
+    }
 }
 
 
