@@ -542,7 +542,6 @@ header {
   border-radius: 5px;
   color: #fff;
   background-color: #0097a7;
-  transition: background-color 0.8s;
   margin: 5px;
   font-size: 14px;
 }
@@ -550,6 +549,7 @@ header {
 .card_button button:hover {
   border: 1px solid #D94140;
   background-color: #D94140;
+  transition: background-color 0.8s;
 }
 
 .card_icons {
@@ -561,6 +561,31 @@ header {
 
 .card_icons i {
   padding: 0 5px;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #0097a7;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.pagination li:hover {
+  background-color: #D94140;
+  transition: background-color 0.8s;
 }
 
 #html5_icon {

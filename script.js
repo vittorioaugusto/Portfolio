@@ -77,6 +77,28 @@ function highlightOnScroll() {
     });
 }
 
+
+function showPage(pageNumber) {
+    var allSections = document.querySelectorAll('.page');
+    allSections.forEach(function (div) {
+        if (!div.classList.contains('contact-me')) {
+            if (typeof AOS !== 'undefined' && AOS.init) {
+                AOS.refreshHard();
+            }
+            div.style.display = 'none';
+        }
+    });
+
+    // Mostra a seção da página selecionada
+    var selectedSection = document.querySelector('.pag-' + pageNumber);
+    if (selectedSection) {
+        if (!selectedSection.classList.contains('contact-me')) {
+            selectedSection.style.display = 'block';
+        }
+    }
+}
+
+
 window.addEventListener('scroll', highlightOnScroll);
 
 window.addEventListener('load', highlightOnScroll);
