@@ -467,14 +467,6 @@ header{
     }
 }
 
-@media screen and (max-width: 768){
-    .about_content{
-        flex-direction: column;
-    }
-}
-
-
-
 .conhecimentos {
     display: flex;
     align-items: center;
@@ -492,13 +484,22 @@ header{
     margin: 20px;
 }
 
+.habilidade h3{
+    padding: 10px;
+}
+
 @media screen and (max-width: 768px) {
     .conhecimento{
-        padding: 100px 0;
+        padding: 50px 0;
+    }
+
+    .about_content{
+        flex-direction: column;
     }
 
     .conhecimentos {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .habilidade {
@@ -509,6 +510,30 @@ header{
         max-width: 100px;
     }
 
+}
+
+@media screen and (max-width: 630px) {
+    .habilidade {
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        font-size: 12px;
+    }
+
+    .habilidade img{
+        max-width: 80px;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .habilidade {
+        text-align: center;
+        align-items: center;
+        font-size: 10px;
+    }
+    .habilidade img{
+        max-width: 50px;
+    }
 }
 
 
@@ -555,7 +580,6 @@ header{
     border-radius: 10px;
     box-shadow: 0px -1px 17px -4px rgba(0,0,0, 0.45);
     overflow: hidden;
-
 }
 
 .card img{
