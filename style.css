@@ -419,8 +419,8 @@ header {
   justify-content: center;
 }
 .about_description h2 {
-  font-size: 38px;
-  margin-bottom: 20px;
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 .about_description p {
   margin-bottom: 10px;
@@ -439,7 +439,7 @@ header {
 }
 
 .conhecimentos img {
-  max-width: 120px;
+  max-width: 110px;
 }
 
 .habilidade {
@@ -474,7 +474,6 @@ header {
 }
 
 .projects_content h2 {
-  text-transform: uppercase;
   text-align: center;
   font-size: 40px;
 }
