@@ -589,7 +589,6 @@ header{
     transition: transform 0.2s;
 }
 
-
 .card img:hover{
     transform: scale(1.2);
     z-index: 1;
@@ -602,6 +601,7 @@ header{
     background-color: $white-normal;
     z-index: 99;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     font-size: 15px;
     font-weight: 700;
@@ -729,9 +729,14 @@ header{
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media screen and (max-width: 350px) {
     .card img{
-        width: 300px;
+        width: 250px;
+    }
+
+    .card_info{
+        text-align: center;
+        align-items: center;
     }
 }
 
