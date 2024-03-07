@@ -823,16 +823,18 @@ header{
 .footer{
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    padding: 50px 0;
-    gap: 24px;
+    padding: 10px;
+    gap: 20px;
     color: $white-normal;
     background-color: $primary-normal;
 }
 
 .footer_icons{
     display: flex;
+    padding: 10px;
     gap: 10px;
     color: $white-normal;
 }
